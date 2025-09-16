@@ -13,7 +13,7 @@ const header = {
   ],
   rightBtn: {
     label: "Curriculum Vitae | CV",
-    onClick: () => openLink("assets/CV_english.pdf"),
+    onClick: () => openLink("assets/CV_English.pdf"),
   },
   logo: {
     src: "/assets/photo-logo1.png",
