@@ -2,6 +2,8 @@
 
 > This is my personal portfolio website built with **Next.js**, **React**, and **SCSS**.  
 It showcases my projects, skills, and experience as a frontend developer.
+> 
+> (I had some technical problems with last repo so I had to move my whole project to this one)
 
 🔗 **Live Demo:** [https://jamirankinen.com)
 
@@ -40,3 +42,4 @@ git clone https://github.com/Jamirankinen/portfolio_v2.git
 cd portfolio_v2
 npm install
 npm run dev
+
