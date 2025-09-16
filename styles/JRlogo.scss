@@ -1,0 +1,61 @@
+$jr-transition: cubic-bezier(0.82, 0.01, 1, 0.11);
+
+.jr-logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; // optional, centers vertically too
+  transition: transform 1000ms linear; // scoped transition only for transforms
+
+  .jr-parallax {
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1000ms $jr-transition; // added transition so scale animates smoothly
+    will-change: transform; // hint browser for smoother animation
+  }
+
+  .jr_svg_J {
+    transform-origin: center left;
+    transition: transform 300ms $jr-transition, opacity 300ms $jr-transition;
+    width: 40%;
+    height: 40%;
+    left: 20%;
+  }
+
+  .jr_svg_R {
+    transform-origin: center right;
+    transition: transform 600ms $jr-transition, opacity 600ms $jr-transition;
+    width: 40%;
+    height: 40%;
+    right: 20%;
+  }
+
+
+  .jr_svg_Circle circle {
+  stroke-dashoffset: 2513.27; // fallback, will be overridden by React
+  transition: stroke-dashoffset 2s ease-out;
+  transform: rotate(-90deg);          // start from top (12 o'clock)
+  transform-origin: 50% 50%;
+}
+  
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+  }
+}
+
+.jr-logo-visible {
+  .jr-parallax {
+    transform: scale(1);
+  }
+.jr_svg_Circle circle {
+  stroke-dashoffset: 0;
+}
+}
